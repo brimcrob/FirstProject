@@ -1,29 +1,8 @@
 # display person info
 # Parameters : name, age
 def display_person_info(name, age):
-    print()
     print("You name is " + name + " you are " + str(age) + " years old.")
-    print("Soon you will be " + str(age + 1) + " years old.")
-    # age == 17 : You are almost an adult
-    # age == 18 : You are now an adult. Congrats!
-    # the order of the elif is important.
-    # age > 60 you are a senior
-    # age < 10 you are a kid
-    if age > 60:
-        print("You are a Senior")
-    elif age < 10:
-        print("You are a kid")
-    elif age == 17:
-        print("You are almost an adult")
-    elif age == 18:
-        print("You are now an adult. Congrats!")
-    elif age >= 18:
-        print("You are an adult")
-    else:
-        print("You are a minor")
-
-
-
+    print("Soon you will be " + str(age1 + 1) + " years old")
 
 
 def ask_for_age(person_name):
