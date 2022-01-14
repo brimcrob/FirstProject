@@ -9,21 +9,25 @@ def display_person_info(name, age):
     # the order of the elif is important.
     # age > 60 you are a senior
     # age < 10 you are a kid
-    if age > 60:
+    # age >=10 and age <18 => Teenager
+    # age == 1 or age == 2 => Baby
+
+    if age == 17:
+        print("You are almost an adult")
+    elif 10 <= age < 18:
+        print("You are a teenager.")
+    elif age == 1 or age == 2:
+        print("You are a baby")
+    elif age == 18:
+        print("You are now an adult. Congrats!")
+    elif age > 60:
         print("You are a Senior")
     elif age < 10:
         print("You are a kid")
-    elif age == 17:
-        print("You are almost an adult")
-    elif age == 18:
-        print("You are now an adult. Congrats!")
     elif age >= 18:
         print("You are an adult")
     else:
         print("You are a minor")
-
-
-
 
 
 def ask_for_age(person_name):
@@ -45,11 +49,20 @@ def ask_for_name():
 
 
 # ask for the name
-name1 = ask_for_name()
-name2 = ask_for_name()
-# ask for the age
-age1 = ask_for_age(name1)
-age2 = ask_for_age(name2)
-# display the results
-display_person_info(name1,age1)
-display_person_info(name2,age2)
+# name1 = ask_for_name()
+# name2 = ask_for_name()
+# # ask for the age
+# age1 = ask_for_age(name1)
+# age2 = ask_for_age(name2)
+# # display the results
+# display_person_info(name1, age1)
+# display_person_info(name2, age2)
+
+# NB_PERSONS an example of a Convention\Constant never gets updated else where
+NB_PERSONS = 3
+
+for i in range(0, NB_PERSONS):
+    name = "foo" + str(i+1)
+    age = ask_for_age(name)
+    display_person_info(name, age)
+
